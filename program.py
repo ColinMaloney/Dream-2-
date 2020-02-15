@@ -4,13 +4,13 @@ def main():
     #print the header
     print_the_header()
     #get zipcode from user
-    zcode = input('What is the zipcode you want to see the weather? [XXXXX]: ')
+    zcode = input('What is the zipcode you want to see the wind gusts? [XXXXX]: ')
 
     #get HTML form web
     get_html_from_web(zcode)
     gusts = response.text
     #display the gust information
-    print(f'The gusts in area code {zipcode} are {gusts}')
+    print(f'The gusts in area code {zcode} are {gusts}')
     quitting = input('Would you like to quit? y or n : ')
     if quitting == n:
         main()
